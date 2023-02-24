@@ -1,0 +1,134 @@
+:root {
+  --green: #00FF00;
+  --white: #FFFFFF;
+  --black: #000000;
+  --blue:  #0000ff; 
+  --spacegray: #65737e;
+}
+
+#map {
+    left: 10px;
+    height: 500px;
+    width: 1480px;
+}
+
+body {
+    background: var(--bg);
+    color: var(--fontColor);
+    font-family: monospace;
+    text-align: center;
+}
+
+.h1{
+    background-color: #009879;
+}
+
+li {
+    list-style: circle;
+}
+
+.list {
+    list-style: square;
+}
+
+.light-theme {
+    --bg: var(--white);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
+  
+.dark-theme {
+    --bg: var(--spacegray);
+    --fontColor: var(--white);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+}
+
+.btn {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg); 
+}
+
+.legend {
+    padding: 6px 8px;
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    color: #000000
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+div.legend.leaflet-control br {
+    clear: both;
+}
+
+#data {
+    background: var(--bg);
+    color: var(--fontColor);
+    font-family: monospace;
+}
+
+.dataTable {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 500px;
+    margin-left: 100px; 
+    
+}
+
+.dataTable thead tr{
+    background-color: #009879;
+    color: white;
+    left: 20px;
+    text-align: center;
+    font-weight: bolder;
+    min-width: 500px;
+
+}
+
+.dataTable td {
+    padding: 12px 15px;
+    font-weight: bold;
+    font-size: medium;
+  
+}
+
+.dataTable tbody tr {
+    border-bottom: 1px solid #dddddd;
+    border-right: #dddddd;
+}
+
+.dataTable tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+
+.dataTable tbody tr:last-of-type{
+    border-bottom: 2px solid #009879; 
+}
+
+.countyName{
+    width: 500px;
+    height: 25px;
+    color: white;
+    background-color: #009879;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    margin: 25px 0;
+    margin-left: 500px;;
+    
+}   
