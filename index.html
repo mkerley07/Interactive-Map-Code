@@ -1,163 +1,51 @@
 <!DOCTYPE html>
-
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
-crossorigin=""/>
-<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
-     crossorigin=""></script>
-
-
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Map</title>
-    <link rel="stylesheet" href="main.css">
+	<title>Login Page</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+			margin-top: 100px;
+		}
+		
+		input[type=password] {
+			padding: 10px;
+			margin: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+		
+		button {
+			padding: 10px;
+			margin: 10px;
+			background-color: #009879;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	</style>
 </head>
-<body class="light-theme">
-
-  <h1>Counties Map</h1>
-  <p id="msg"></p>
-
-  <div id="map"></div>
-  
-  <div>
-    <button class="btn">Dark</button>
-  </div>
-</body>
-  <!--Table-->
 <body>
-  <div class="countyName"  id="countyName">County Name</div>
-  <table class="dataTable" id="dataTable">
-    <thead>
-      <tr>
-        <th></th>
-        <th>Data</th>
-      </tr>
-    </thead>
+	<h1>Login Page</h1>
+	<form onsubmit="checkPassword(event)">
+		<label for="password">Password:</label><br>
+		<input type="password" id="password" name="password"><br>
+		<button type="submit">Login</button>
+	</form>
 
-    <tbody>
-      <tr>
-        <td>Provider</td>
-        <td id="Whoownsit">N/A</td>
-      </tr>
+	<script>
+		function checkPassword(event) {
+			event.preventDefault();
+			var password = document.getElementById("password").value;
+			if (password === "password") {
+				window.location.href = "main.html";
+			} else {
+				alert("Incorrect password. Please try again.");
+			}
+		}
+	</script>
+</body>
+</html>
 
-      <thead>
-        <tr>
-          <th></th>
-          <th>Data</th>
-        </tr>
-      </thead>
-  
-
-      <tr>
-        <td>Sherrif:</td>
-        <td id="SheriffName">N/A</td>
-      </tr>
-      <tr>
-        <td>Sheriff Contact Info:</td>
-        <td id="SheriffContact">N/A</td>
-      </tr>
-
-      <thead>
-        <tr>
-          <th></th>
-          <th>Data</th>
-        </tr>
-      </thead>
-  
-      <tr>
-        <td>Jail Administrator:</td>
-        <td id="JAdminName">N/A</td>
-      </tr>
-
-      <tr>
-        <td>Jail Admin Contact Info:</td> 
-        <td id="JAdminContact">N/A</td>
-      </tr>
-
-      <thead>
-        <tr>
-          <th></th>
-          <th>Data</th>
-        </tr>
-      </thead>
-
-      <tr>
-        <td>Mayor:</td>
-        <td id="MayorName">N/A</td>
-      </tr>
-
-      <tr>
-        <td>Mayor Contact Info:</td>
-        <td id="MayorContact">N/A</td>
-      </tr>
-
-      <thead>
-        <tr>
-          <th></th>
-          <th>Data</th>
-        </tr>
-      </thead>
-
-      <tr>
-        <td>Finance Director:</td>
-        <td id="FinanceName">N/A</td>
-      </tr>
-
-      <tr>
-        <td>Finance Director Contact Info:</td>
-        <td id="FinanceContact">N/A</td>
-      </tr>
-
-      <thead>
-        <tr>
-          <th>CONTRACT INFO</th>  
-          <th>Data</th>
-        </tr>
-      </thead>
-
-      <tr>
-        <td>Jail ADP:</td>
-        <td id="JailADP">N/A</td>
-      </tr>
-
-      <tr>
-        <td>Contract Expiration:</td>
-        <td id="Expiration">N/A</td>
-      </tr>
-
-      <tr>
-        <td>Contract Annual Value:</td>
-        <td id="AnnualValue">N/A</td>
-      </tr>
-
-      <tr>
-        <td>Cost Pool Amount:</td>
-        <td id="CostPool">N/A</td>
-      </tr>
-
-      <tr>
-        <td>AIMS Link:</td>
-        <td id="AIMS">N/A</td>
-      </tr>
-
-      <tr>
-        <td>Notes:</td>
-        <td id="Notes">N/A</td>
-      </tr>
-
-
-    </tbody>
-  </table>
-  
-
-  <script src="app.js"></script>
-  <noscript>You need to enable JavaScript to view the full site.</noscript>
-
-</body>  
-
-</html> 
