@@ -129,6 +129,19 @@ div.legend.leaflet-control br {
     font-size: large;
     text-align: center;
     margin: 25px 0;
-    margin-left: 500px;;
+    margin-left: 100px;;
     
 }   
+
+.ownedlist{
+    width: 500px;
+    float: left;
+    height: 25px;
+    color: white;
+    background-color: #009879;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    margin: 25px 0;
+    margin-left: 500px;;
+}

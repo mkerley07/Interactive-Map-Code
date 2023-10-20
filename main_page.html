@@ -20,6 +20,15 @@ crossorigin=""/>
 <body class="light-theme">
 
   <h1>Fast Access Correctional Healthcare</h1>
+
+  <label for="states">Select a State:</label>
+<select id="states">
+    <option value="Tennessee">State 1</option>
+    <option value="Kentucky">State 2</option>
+    <!-- Add options for other states -->
+</select>
+
+
   <p id="msg"></p>
 
   <div id="map"></div>
@@ -30,8 +39,9 @@ crossorigin=""/>
 </body>
   <!--Table-->
 <body>
-  <div class="countyName"  id="countyName">County Name</div>
-  <table class="dataTable" id="dataTable">
+  <div>
+  <div class="countyName"  id="countyName">County Name</div> 
+  </div><table class="dataTable" id="dataTable">
     <thead>
       <tr>
         <th></th>
@@ -153,6 +163,12 @@ crossorigin=""/>
 
     </tbody>
   </table>
+
+  <div id="ownedList">
+    FAH
+  </div>
+
+</div>
   
 
   <script src="app.js"></script>
